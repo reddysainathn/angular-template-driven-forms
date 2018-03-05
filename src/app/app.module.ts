@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
@@ -12,7 +12,8 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
     ContactFormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
