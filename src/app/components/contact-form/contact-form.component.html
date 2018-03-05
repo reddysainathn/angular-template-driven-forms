@@ -51,8 +51,41 @@
       <input type="checkbox" ngModel name="isSubscribed"> Subcrible the Mailing List.
     </label>
   </div>
+  <div class="form-group">
+    <label for="contactMethod">Contact Method</label>
+    <h4>Select with Simple HTML value</h4>
+    <select ngModel name="contactMethod" id="contactMethod" class="form-control">
+      <option value=""></option>
+      <option
+        *ngFor="let method of contactMethods"
+        [value]="method.id">
+        {{method.name}}
+      </option>
+    </select>
+    <br>
+    <h4>Select with Angular ngValue</h4>
+    <select ngModel name="contactMethodNG" id="contactMethodNG" class="form-control">
+        <option value=""></option>
+        <option
+          *ngFor="let method of contactMethods"
+          [ngValue]="method">
+          {{method.name}}
+        </option>
+      </select>
+      <br>
+      <h4>Select with multiple values</h4>
+      <select multiple ngModel name="contactMethodMultiple" id="contactMethodMultiple" class="form-control">
+          <option value=""></option>
+          <option
+            *ngFor="let method of contactMethods"
+            [value]="method.id">
+            {{method.name}}
+          </option>
+        </select>
+  </div>
   <p>
     {{ f.value | json}}
   </p>
+
   <button class="btn btn-primary" [disabled]="!f.valid">Submit</button>
 </form>
