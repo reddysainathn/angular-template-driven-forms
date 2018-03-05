@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "page": "ng build --prod --base-href=\"https://reddysainathn.github.io/angular-directives/\" && ngh"
+    "page": "ng build --prod --base-href=\"https://reddysainathn.github.io/angular-template-driven-forms/\" && ngh"
   },
   "private": true,
   "dependencies": {
