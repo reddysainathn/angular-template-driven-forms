@@ -83,6 +83,25 @@
           </option>
         </select>
   </div>
+  <div class="radio">
+    <label for="">
+      <input ngModel type="radio" name="contactMethod" value="1">
+      Email
+    </label>
+  </div>
+  <div class="radio">
+      <label for="">
+        <input ngModel type="radio" name="contactMethod" value="2">
+        Phone
+      </label>
+  </div>
+  <h4>Using ngFor with Radio Buttons</h4>
+  <div *ngFor="let method of contactMethods" class="radio">
+        <label for="">
+          <input ngModel type="radio" name="contactMethodRadio" [value]="method.id">
+          {{ method.name }}
+        </label>
+  </div>
   <p>
     {{ f.value | json}}
   </p>
