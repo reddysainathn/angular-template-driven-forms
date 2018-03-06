@@ -54,7 +54,7 @@
   <div class="form-group">
     <label for="contactMethod">Contact Method</label>
     <h4>Select with Simple HTML value</h4>
-    <select ngModel name="contactMethod" id="contactMethod" class="form-control">
+    <select ngModel name="contactMethod" #contachMethods="ngModel" id="contactMethod" class="form-control">
       <option value=""></option>
       <option
         *ngFor="let method of contactMethods"
